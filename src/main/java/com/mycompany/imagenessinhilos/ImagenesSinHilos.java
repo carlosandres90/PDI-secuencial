@@ -17,7 +17,7 @@ public class ImagenesSinHilos {
     public static void main(String[] args) {
         try {
             // Cargar la imagen desde un archivo
-            File archivoEntrada = new File("/Users/andrespillajo/Documents/imagen.png"); // Cambia "imagen.png" por la ruta de tu imagen
+            File archivoEntrada = new File("imagen.png"); // Cambia "imagen.png" por la ruta de tu imagen
             BufferedImage imagen = ImageIO.read(archivoEntrada);
             
             if (imagen == null) {
@@ -59,7 +59,7 @@ public class ImagenesSinHilos {
             long fin = System.nanoTime(); // Registrar tiempo final
 
             // Guardar la imagen resultante
-            File archivoSalida = new File("/Users/andrespillajo/Documents/imagen--gris01.png");
+            File archivoSalida = new File("imagen_gris.png"); // Cambia "imagen_gris.png" por la ruta de tu imagen
             ImageIO.write(imagen, "png", archivoSalida);
 
             System.out.println("Imagen convertida a escala de grises y guardada como 'imagen_gris.jpg'.");
